@@ -595,6 +595,85 @@ ul, ol {
   margin-top: 170px;
 }
 
+.info h2 {
+  margin-bottom: 90px;
+}
+.info .container {
+  padding-top: 130px;
+  padding-bottom: 200px;
+}
+.info .products__tabBtn {
+  margin-bottom: 130px;
+}
+
+.info__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 24px;
+  position: relative;
+}
+
+.info__box::before {
+  content: "";
+  height: 40px;
+  border-radius: 8px 8px 0px 0px;
+  border-top: 1px solid rgba(79, 79, 79, 0.2);
+  border-right: 1px solid rgba(79, 79, 79, 0.2);
+  border-left: 1px solid rgba(79, 79, 79, 0.2);
+  position: absolute;
+  top: -24px;
+  left: 0;
+  right: 0;
+}
+
+.info__box::after {
+  content: "";
+  height: 40px;
+  border-radius: 0px 0px 8px 8px;
+  border-right: 1px solid rgba(79, 79, 79, 0.2);
+  border-bottom: 1px solid rgba(79, 79, 79, 0.2);
+  border-left: 1px solid rgba(79, 79, 79, 0.2);
+  position: absolute;
+  bottom: -24px;
+  left: 0px;
+  right: 0px;
+}
+
+.info__img {
+  max-width: 440px;
+  width: 100%;
+  height: 404px;
+  position: relative;
+  overflow: hidden;
+}
+.info__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}
+
+.info__content {
+  max-width: 440px;
+  width: 100%;
+}
+.info__content p {
+  color: #222;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
 .equipment {
   background: #222;
 }
@@ -1214,6 +1293,61 @@ ul, ol {
 }
 .reviews .container {
   padding-bottom: 160px;
+}
+.reviews .slick-prev, .reviews .slick-next {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  z-index: 9;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  top: auto;
+  bottom: 80px;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.reviews .slick-prev {
+  left: 45%;
+}
+.reviews .slick-next {
+  left: 55%;
+}
+.reviews .slick-prev::before, .reviews .slick-next::before {
+  display: none;
+}
+.reviews .slick-prev::after, .reviews .slick-next::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.reviews .slick-prev::after {
+  left: 55%;
+  border-top: 0;
+  border-right: 0;
+}
+.reviews .slick-next::after {
+  left: 45%;
+  border-left: 0;
+  border-bottom: 0;
+}
+.reviews .slick-prev:hover, .reviews .slick-next:hover {
+  background: #FFF;
+  border-color: #FFF;
+}
+.reviews .slick-prev:hover::after, .reviews .slick-next:hover::after {
+  border-color: #000000;
 }
 
 .reviews__box {
@@ -1929,6 +2063,40 @@ ul, ol {
   .quantity .container {
     padding-bottom: 90px;
   }
+  .info {
+    display: block;
+  }
+  .info h2 {
+    margin-bottom: 48px;
+  }
+  .info .products__tabBtn {
+    margin-bottom: 60px;
+  }
+  .info .container {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+  .info__box {
+    padding: 0 16px;
+  }
+  .info__box::before {
+    top: -16px;
+  }
+  .info__box::after {
+    bottom: -16px;
+  }
+  .info__content {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .info__content p {
+    font-size: 14px;
+  }
+  .info__img {
+    height: 272px;
+    margin-top: 40px;
+  }
   .equipment {
     display: block;
   }
@@ -2100,8 +2268,23 @@ ul, ol {
   .reviews {
     display: block;
   }
+  .reviews .slick-prev, .reviews .slick-next {
+    bottom: -70px;
+    width: 32px;
+    height: 32px;
+  }
+  .reviews .slick-prev::after, .reviews .slick-next::after {
+    width: 7px;
+    height: 7px;
+  }
+  .reviews .slick-prev {
+    left: 35%;
+  }
+  .reviews .slick-next {
+    left: 65%;
+  }
   .reviews .container {
-    padding-bottom: 140px;
+    padding-bottom: 150px;
   }
   .reviews h2 {
     margin-bottom: 40px;
