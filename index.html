@@ -53,7 +53,7 @@
                     <div class="header__contacts">
                         <a href="#" class="link">Контакты</a>
                         <a href="tel:8 (383) 256-56-56" class="header__phone">8 (383) 256-56-56</a>
-                        <button class="header__call">Заказать звонок</button>
+                        <button class="header__call modal-open">Заказать звонок</button>
                     </div>
                 </div>
                 
@@ -72,10 +72,29 @@
             </div>
         </div>
     </header>
+    <!-- modal -->
+    <div class="modal">
+        <div class="modal__block">
+            <button class="modal__close"></button>
+            <h2>Подать заявку</h2>
+            <div class="application__wrap">
+                <div class="application__input">
+                    <input type="text" placeholder="Ваше имя*">
+                </div>
+                <div class="application__input">
+                    <input type="text" placeholder="Номер телефона">
+                </div>
+                <textarea class="application__textarea" placeholder="Сообщение"></textarea>
+                <button class="main_btn2">
+                    <span>Заказать звонок</span>
+                </button>
+            </div>
+        </div>
+    </div>
     <main class="main">
         <section class="banner">
             <div class="banner__slider">
-                <div class="banner__block">
+                <div class="banner__block" style="background: url(img/banner.png) no-repeat center / cover;">
                     <div class="container">
                         <div class="banner__wrap">
                             <h1>Трактель — эффективные решения для монтажа лифтового оборудования</h1>
@@ -84,7 +103,7 @@
                         
                     </div>
                 </div>
-                <div class="banner__block">
+                <div class="banner__block" style="background: url(img/banner.png) no-repeat center / cover;">
                     <div class="container">
                         <div class="banner__wrap">
                             <h1>Трактель — эффективные решения для монтажа лифтового оборудования</h1>
@@ -174,23 +193,23 @@
                 <div class="equipment__slider">
                     <div class="equipment__wrap">
                         <div class="equipment__block">
-                            <p>Монтаж с платформы, с использованием полиспаста и противовеса</p>
+                            <p>Установка анкерных точек с помощью выносной платформы</p>
                             <div class="equipment__img">
                                 <img src="img/equipment-2.png" alt="">
-                                <a href="#" class="equipment__btn link1"><span></span></a>
-                                <a href="#" class="equipment__btn link2"><span></span></a>
-                                <a href="#" class="equipment__btn link3"><span></span></a>
-                                <a href="#" class="equipment__btn link4"><span></span></a>
-                                <a href="#" class="equipment__btn link5"><span></span></a>
+                                <a href="#" class="equipment__btn link6"><span></span></a>
                             </div>
                         </div>
                     </div>
                     <div class="equipment__wrap">
                         <div class="equipment__block">
-                            <p>Установка анкерных точек с помощью выносной платформы</p>
+                            <p>Монтаж с платформы, с использованием полиспаста и противовеса</p>
                             <div class="equipment__img">
                                 <img src="img/equipment-1.png" alt="">
-                                <a href="#" class="equipment__btn link6"><span></span></a>
+                                <a href="#" class="equipment__btn link1"><span></span></a>
+                                <a href="#" class="equipment__btn link2"><span></span></a>
+                                <a href="#" class="equipment__btn link3"><span></span></a>
+                                <a href="#" class="equipment__btn link4"><span></span></a>
+                                <a href="#" class="equipment__btn link5"><span></span></a>
                             </div>
                         </div>
                     </div>
@@ -766,7 +785,7 @@
                     <p>Телефон: <a href="tel:8 (383) 256-56-56">8 (383) 256-56-56</a></p>
                 </div>
                 <div class="footer__right">
-                    <button class="footer__call">Обратный звонок</button>
+                    <button class="footer__call modal-open">Обратный звонок</button>
                 </div>
             </div>
             <div class="footer__bottom">

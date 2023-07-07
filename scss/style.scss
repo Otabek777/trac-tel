@@ -189,6 +189,83 @@ ul, ol {
     width: 0;
 }
 
+// modal
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 100px 16px;
+    overflow-y: auto;
+    opacity: 0;
+    transition: all .4s ease;
+}
+.modal.active {
+    display: block;
+}
+.modal.open {
+    opacity: 1;
+    .modal__block {
+        transform: scale(1);
+    }
+}
+.modal__block {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    background: #222;
+    border-radius: 20px;
+    padding: 100px;
+    position: relative;
+    transform: scale(0.7);
+    transition: all .2s ease;
+    h2 {
+        font-size: 32px;
+        color: #FFFFFF;
+        margin-bottom: 32px;
+        text-align: start;
+    }
+    .application__wrap {
+        max-width: 100%;
+    }
+}
+.modal__close {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    border: 0;
+    background: transparent;
+}
+.modal__close::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 5px;
+}
+.modal__close::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border-radius: 5px;
+}
+
+
 // header
 .header {
     display: flex;
@@ -222,6 +299,7 @@ ul, ol {
 }
 .header__contacts {
     display: flex;
+    align-items: center;
     .link {
         display: flex;
         align-items: center;
@@ -334,7 +412,6 @@ ul, ol {
 }
 .banner__block {
     min-height: 856px;
-    background: url(../img/banner.png) no-repeat center / cover;
 }
 .banner__wrap {
     max-width: 1136px;
@@ -439,10 +516,11 @@ ul, ol {
 .company__num {
     width: 80px;
     color: #000;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .company__block {
     max-width: 330px;
@@ -1455,6 +1533,15 @@ ul, ol {
     .reviews__block {
         max-width: 420px;
     }
+    .lines {
+        opacity: 0.4;
+        div:nth-child(2) {
+            transform: translateX(30px);
+        }
+        div:nth-child(3) {
+            transform: translateX(-30px);
+        }
+    }
 }
 @media screen and (max-width: 1370px) {
     .equipment__block {
@@ -1493,7 +1580,27 @@ ul, ol {
         width: 100px;
     }
 }
+@media screen and (max-width: 1150px) {
+    .lines {
+        div:nth-child(2) {
+            transform: translateX(10px);
+        }
+        div:nth-child(3) {
+            transform: translateX(-10px);
+        }
+    }
+}
 @media screen and (max-width: 1024px) {
+    .modal__block {
+        padding: 32px 24px;
+        border-radius: 10px;
+    }
+    .modal__close {
+        top: 20px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+    }
     .lines {
         display: none;
     }
@@ -1780,7 +1887,7 @@ ul, ol {
         }
     }
     .company__num {
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 18px;
     }
     h6 {

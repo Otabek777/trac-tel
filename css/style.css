@@ -219,6 +219,93 @@ ul, ol {
   width: 0;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 100px 16px;
+  overflow-y: auto;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal.open {
+  opacity: 1;
+}
+.modal.open .modal__block {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.modal__block {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  background: #222;
+  border-radius: 20px;
+  padding: 100px;
+  position: relative;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.modal__block h2 {
+  font-size: 32px;
+  color: #FFFFFF;
+  margin-bottom: 32px;
+  text-align: start;
+}
+.modal__block .application__wrap {
+  max-width: 100%;
+}
+
+.modal__close {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  border: 0;
+  background: transparent;
+}
+
+.modal__close::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 5px;
+}
+
+.modal__close::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  border-radius: 5px;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -263,6 +350,9 @@ ul, ol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header__contacts .link {
   display: -webkit-box;
@@ -406,7 +496,6 @@ ul, ol {
 
 .banner__block {
   min-height: 856px;
-  background: url(../img/banner.png) no-repeat center/cover;
 }
 
 .banner__wrap {
@@ -521,10 +610,11 @@ ul, ol {
 .company__num {
   width: 80px;
   color: #000;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .company__block {
@@ -1742,6 +1832,17 @@ ul, ol {
   .reviews__block {
     max-width: 420px;
   }
+  .lines {
+    opacity: 0.4;
+  }
+  .lines div:nth-child(2) {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  .lines div:nth-child(3) {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
 }
 @media screen and (max-width: 1370px) {
   .equipment__block {
@@ -1780,7 +1881,27 @@ ul, ol {
     width: 100px;
   }
 }
+@media screen and (max-width: 1150px) {
+  .lines div:nth-child(2) {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  .lines div:nth-child(3) {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+}
 @media screen and (max-width: 1024px) {
+  .modal__block {
+    padding: 32px 24px;
+    border-radius: 10px;
+  }
+  .modal__close {
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+  }
   .lines {
     display: none;
   }
@@ -2122,7 +2243,7 @@ ul, ol {
     font-size: 14px;
   }
   .company__num {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 18px;
   }
   h6 {
