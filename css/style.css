@@ -333,6 +333,11 @@ ul, ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.header__navbar a:hover {
+  color: #009FE3;
 }
 
 .header__center {
@@ -366,6 +371,11 @@ ul, ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.header__contacts .link:hover {
+  color: #009FE3;
 }
 
 .header__phone {
@@ -375,6 +385,12 @@ ul, ol {
   font-weight: 400;
   line-height: normal;
   margin: 0 40px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.header__phone:hover {
+  color: #009FE3;
 }
 
 .header__call {
@@ -1701,6 +1717,11 @@ ul, ol {
 }
 .footer__center p a {
   color: #000;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.footer__center p a:hover {
+  color: #009FE3;
 }
 .footer__center p:last-child {
   margin-bottom: 0;
@@ -1758,6 +1779,9 @@ ul, ol {
 }
 .footer__bottom .center p a {
   color: #009FE3;
+}
+.footer__bottom .center p a:hover {
+  text-decoration: underline;
 }
 
 .footer__bottom::before {

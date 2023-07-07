@@ -288,6 +288,10 @@ ul, ol {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        transition: all .2s ease;
+    }
+    a:hover {
+        color: #009FE3;
     }
 }
 .header__center {
@@ -308,6 +312,10 @@ ul, ol {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        transition: all .2s ease;
+    }
+    .link:hover {
+        color: #009FE3;
     }
 }
 .header__phone {
@@ -317,6 +325,10 @@ ul, ol {
     font-weight: 400;
     line-height: normal;
     margin: 0 40px;
+    transition: all .2s ease;
+}
+.header__phone:hover {
+    color: #009FE3;
 }
 .header__call {
     color: #009FE3;
@@ -1422,6 +1434,10 @@ ul, ol {
         margin-bottom: 40px;
         a {
             color: #000;
+            transition: all .2s ease;
+        }
+        a:hover {
+            color: #009FE3;
         }
     }
     p:last-child {
@@ -1465,6 +1481,9 @@ ul, ol {
             line-height: 150%;
             a {
                 color: #009FE3;
+            }
+            a:hover {
+                text-decoration: underline;
             }
         }
     }
