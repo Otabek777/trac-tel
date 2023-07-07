@@ -6,8 +6,41 @@
 }
 
 @import url(../fonts/ITCFranklinGothicStd/stylesheet.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 body {
     font-family: 'ITC Franklin Gothic Std', sans-serif;
+}
+.lines {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1700px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    div {
+
+    }
+    span:nth-child(1) {
+        display: block;
+        width: 1px;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.20);
+        position: fixed;
+        top: 0;
+        z-index: 9;
+    }
+    span:nth-child(2) {
+        display: block;
+        width: 1px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.20);
+        position: fixed;
+        top: 0;
+        z-index: 9;
+    }
 }
   
 :focus {
@@ -190,6 +223,8 @@ ul, ol {
 .header__contacts {
     display: flex;
     .link {
+        display: flex;
+        align-items: center;
         color: #222;
         font-size: 16px;
         font-style: normal;
@@ -199,7 +234,7 @@ ul, ol {
 }
 .header__phone {
     color: #222;
-    font-size: 16px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -312,7 +347,7 @@ ul, ol {
         margin-bottom: 64px;
     }
     p {
-        max-width: 488px;
+        max-width: 452px;
         width: 100%;
         margin: 0 auto;
         color: #FFF;
@@ -468,11 +503,12 @@ ul, ol {
     }
 }
 .quantity__num {
+    font-family: 'Noto Sans KR', sans-serif;
     color: #009FE3;
     text-align: center;
     font-size: 96px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal;
     margin: 0;
 }
@@ -523,6 +559,7 @@ ul, ol {
     justify-content: space-between;
     padding: 0 24px;
     position: relative;
+    margin-bottom: 130px;
 }
 .info__box::before {
     content: "";
@@ -1411,9 +1448,58 @@ ul, ol {
 }
 
 // media
+@media screen and (max-width: 1550px) {
+    .equipment__block {
+        width: 420px;
+    }
+    .reviews__block {
+        max-width: 420px;
+    }
+}
+@media screen and (max-width: 1370px) {
+    .equipment__block {
+        width: 360px;
+    }
+    .reviews__block {
+        max-width: 360px;
+    }
+    .header__navbar li {
+        margin-right: 24px;
+    }
+    .header__navbar a {
+        font-size: 15px;
+    }
+    .header__phone {
+        margin: 0 24px;
+    }
+    .company__img {
+        min-height: auto;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .equipment__block {
+        width: 300px;
+    }
+    .reviews__block {
+        max-width: 300px;
+    }
+}
+@media screen and (max-width: 1250px) {
+    .header__logo {
+        width: 100px;
+        margin-right: 16px;
+    }
+    .header__logo2 {
+        width: 100px;
+    }
+}
 @media screen and (max-width: 1024px) {
-    section {
+    .lines {
         display: none;
+    }
+    .container {
+        max-width: 700px;
+        padding: 0 16px;
     }
     .header {
         min-height: 64px;
@@ -1503,6 +1589,7 @@ ul, ol {
         width: 100%;
         flex-direction: column;
         align-items: flex-start;
+        padding-bottom: 24px;
         .link {
             display: block;
             font-size: 20px;
@@ -1516,9 +1603,6 @@ ul, ol {
         margin-top: 80px;
         margin-bottom: 24px;
         font-size: 20px;
-    }
-    .container {
-        padding: 0 16px;
     }
     .header__center {
         position: relative;
@@ -1541,6 +1625,7 @@ ul, ol {
     }
     .footer__box {
         flex-direction: column;
+        align-items: center;
     }
     .footer__left {
         justify-content: space-between;
@@ -1587,6 +1672,9 @@ ul, ol {
     .footer__kontur {
         justify-content: flex-start;
     }
+    .main {
+        margin-top: 64px;
+    }
     .banner {
         display: block;
         min-height: 464px;
@@ -1631,14 +1719,17 @@ ul, ol {
     }
     .company__box {
         flex-direction: column;
+        align-items: center;
     }
     h2 {
-        font-size: 24px;
+        font-weight: 600;
+        font-size: 21px;
     }
     .company h2 {
         margin-bottom: 48px;
     }
     .company__wrap {
+        max-width: 100%;
         padding: 0 16px;
         margin-bottom: 42px;
     }
@@ -1668,6 +1759,7 @@ ul, ol {
         margin-bottom: 24px;
     }
     .company__center {
+        max-width: 100%;
         margin-bottom: 48px;
     }
     .main_btn, .main_btn2 {
@@ -1705,13 +1797,19 @@ ul, ol {
     }
     .quantity__box {
         flex-direction: column;
+        align-items: center;
     }
     .quantity__block:nth-child(2) {
         margin-top: 0;
     }
     .quantity__block {
+        max-width: 100%;
         height: 210px;
         margin-bottom: 48px;
+        h5 {
+            font-weight: 500;
+            font-size: 15px;
+        }
     }
     .quantity__block:last-child {
         margin-bottom: 0;
@@ -1744,6 +1842,7 @@ ul, ol {
     }
     .info__box {
         padding: 0 16px;
+        margin-bottom: 80px;
     }
     .info__box::before {
         top: -16px;
@@ -1752,17 +1851,34 @@ ul, ol {
         bottom: -16px;
     }
     .info__content {
+        max-width: 100%;
         order: -1;
         p {
             font-size: 14px;
         }
     }
     .info__img {
+        max-width: 100%;
         height: 272px;
         margin-top: 40px;
     }
     .equipment {
         display: block;
+    }
+    .equipment .slick-prev, .equipment .slick-next {
+        bottom: -70px;
+        width: 32px;
+        height: 32px;
+    }
+    .equipment .slick-prev::after, .equipment .slick-next::after {
+        width: 7px;
+        height: 7px;
+    }
+    .equipment .slick-prev {
+        left: 35%;
+    }
+    .equipment .slick-next {
+        left: 65%;
     }
     .equipment .container {
         padding-top: 80px;
@@ -1828,9 +1944,11 @@ ul, ol {
     }
     .products__tabBtn {
         flex-direction: column;
+        align-items: center;
         margin-bottom: 40px;
     }
     .products__tabBtn .btn {
+        max-width: 100%;
         margin-bottom: 32px;
         font-size: 20px;
     }
@@ -1929,6 +2047,7 @@ ul, ol {
         
     }
     .reviews__block {
+        max-width: 100%;
         display: flex !important;
         min-height: 532px;
         padding: 0 16px;
@@ -1971,5 +2090,13 @@ ul, ol {
     }
     .main {
         overflow: hidden;
+    }
+}
+@media screen and (max-width: 350px) {
+    .header__logo {
+        width: 112px;
+    }
+    .header__logo2 {
+        width: 112px;
     }
 }
