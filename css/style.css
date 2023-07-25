@@ -920,6 +920,10 @@ ul, ol {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.equipment__wrap.slick-active + .equipment__wrap + .equipment__wrap .equipment__product {
+  left: auto;
+  right: 48px;
+}
 
 .equipment__block {
   display: -webkit-box;
