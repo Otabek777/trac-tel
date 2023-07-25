@@ -1099,6 +1099,9 @@ ul, ol {
   transition: all 0.3s ease;
 }
 
+.equipment__btn:hover {
+  z-index: 9;
+}
 .equipment__btn:hover .equipment__product {
   display: block;
 }
@@ -1153,21 +1156,34 @@ ul, ol {
   bottom: 370px;
   left: 110px;
 }
+.equipment__btn.link2 .equipment__product {
+  top: -170px;
+}
 
 .equipment__btn.link3 {
   bottom: 300px;
   left: auto;
   right: 90px;
 }
+.equipment__btn.link3 .equipment__product {
+  top: -240px;
+}
 
 .equipment__btn.link4 {
   bottom: 290px;
   left: 70px;
 }
+.equipment__btn.link4 .equipment__product {
+  top: -255px;
+}
 
 .equipment__btn.link5 {
   bottom: 17px;
   left: 170px;
+}
+.equipment__btn.link5 .equipment__product {
+  top: auto;
+  bottom: 40px;
 }
 
 .equipment__btn.link6 {
@@ -1200,6 +1216,10 @@ ul, ol {
   left: auto;
   bottom: 150px;
   right: 130px;
+}
+.equipment__btn.link11 .equipment__product {
+  top: auto;
+  bottom: 40px;
 }
 
 .application {
