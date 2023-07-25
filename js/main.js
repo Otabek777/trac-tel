@@ -25,3 +25,19 @@ $(".modal__close").click(function() {
         $(".modal").removeClass("active");
     },500);
 });
+
+$(".company__wrap .link").click(function() {
+    $(this).addClass("open");
+});
+const accordeon = document.querySelectorAll('.company__item');
+accordeon.forEach(elements => {
+    elements.classList.remove('open');
+    elements.addEventListener('click', function() {
+        if(!elements.classList.contains('open')) {
+            accordeon.forEach (elements => {
+                elements.classList.remove('open');
+            });
+        }
+        elements.classList.toggle('open');
+    });
+});

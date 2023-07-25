@@ -564,17 +564,31 @@ ul, ol {
 }
 
 .company__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 488px;
   width: 100%;
   padding: 0 24px;
+}
+.company__wrap .wrap_text {
+  margin-bottom: 58px;
+  position: relative;
+}
+.company__wrap .wrap_text .block {
+  height: 240px;
+  overflow: hidden;
 }
 .company__wrap h5 {
   margin-bottom: 60px;
   position: relative;
 }
 .company__wrap p {
-  margin-bottom: 58px;
-  position: relative;
+  margin-bottom: 16px;
 }
 .company__wrap .link {
   display: block;
@@ -585,8 +599,12 @@ ul, ol {
   font-weight: 400;
   line-height: 130%;
   position: relative;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  cursor: pointer;
 }
-.company__wrap h5::before, .company__wrap p::before, .company__wrap .link::before {
+.company__wrap h5::before, .company__wrap .wrap_text::before, .company__wrap .link::before {
   content: "";
   height: 30px;
   border-radius: 8px 8px 0px 0px;
@@ -597,6 +615,12 @@ ul, ol {
   top: -16px;
   left: -16px;
   right: -16px;
+}
+.company__wrap .link.open {
+  display: none;
+}
+.company__wrap .link.open + .wrap_text .block {
+  height: auto;
 }
 
 .company__wrap:last-child h5 {
@@ -618,6 +642,7 @@ ul, ol {
   position: relative;
   padding: 0 24px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 .company__item p::before {
   display: none;
@@ -840,9 +865,6 @@ ul, ol {
   padding-bottom: 250px;
 }
 
-/* .equipment__slider .slick-list {
-  overflow: visible;
-} */
 .equipment__slider .slick-prev, .equipment__slider .slick-next {
   width: 42px;
   height: 42px;
@@ -2472,9 +2494,6 @@ ul, ol {
   }
   .equipment__product {
     display: none !important;
-  }
-  .equipment__slider .slick-list {
-    overflow: hidden;
   }
   .equipment__block {
     width: calc(100% - 20px);
