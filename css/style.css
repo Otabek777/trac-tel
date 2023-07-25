@@ -840,9 +840,9 @@ ul, ol {
   padding-bottom: 250px;
 }
 
-.equipment__slider .slick-list {
+/* .equipment__slider .slick-list {
   overflow: visible;
-}
+} */
 .equipment__slider .slick-prev, .equipment__slider .slick-next {
   width: 42px;
   height: 42px;
